@@ -2,12 +2,12 @@ import { Box, Divider, Text } from "@chakra-ui/react";
 import React from "react";
 import Course from "./Course";
 
-const TakenInOptionList = ["Fall 2020", "Winter 2020", "Spring 2021", "Summer 2021", 
+export const TakenInOptionList = ["Fall 2020", "Winter 2020", "Spring 2021", "Summer 2021", 
                             "Fall 2021", "Winter 2021", "Spring 2022", "Summer 2022", 
                             "Fall 2022", "Winter 2022", "Spring 2023", "Summer 2023",
                             "Fall 2023"] as const;
 
-interface Props {
+export interface Props {
     courseName: string;
     instructor: string;
     concentration: string;
@@ -28,7 +28,7 @@ const CourseTaken = ({courseName, instructor, concentration, takenIn, notes}: Pr
           <Divider />
           <Box my={3}>
             <Text fontSize="sm" fontWeight="bold">Course Details:</Text>
-            <Course courseName={courseName} instructor={instructor}/>
+            <Course courseName={courseName} instructor={instructor} concentration={concentration}/>
           </Box>
         </Box>
       );
