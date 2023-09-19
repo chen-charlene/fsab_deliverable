@@ -48,7 +48,7 @@ const NewCourseTakenModal = ({isOpen, onClose, onSaveCourseTaken}: Props) => {
       onClose();
     })
     .catch(function (error) {
-      console.log("An error has occurrd: " + error)
+      console.log("An error has occurred: " + error)
       setIsLoading(false);
     })
   };
